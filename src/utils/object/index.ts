@@ -1,3 +1,6 @@
+import {isSimpleType} from '../common'
+import { isArray } from '../array'
+
 /**
  * @description 检查值是否为对象类型
  * @param value 
@@ -86,4 +89,62 @@ export function series (arrays: any, toKey: (item: any) => any = (item) => item)
     previous,
     spin
   }
+}
+
+export function clone (obj: any):any {
+  if (isSimpleType(obj)) {
+    return obj
+  }
+
+  if (typeof obj == 'function') {
+    return obj.bind({})
+  }
+
+  // 获取obj的构造函数，使用new创建新的对象实例
+  // 同样可以创建数组的副本
+  const newObj = new ((obj as object).constructor as { new (): any})()
+
+  Object.getOwnPropertyNames(obj).forEach(prop => {
+    newObj[prop] = obj[prop]
+  })
+
+  return newObj
+}
+
+/**
+ * @description 反转对象的键和值
+ * @param obj 
+ * @returns 
+ */
+export function invert (obj: any):any {
+  if (!obj) return {}
+
+  const keys = Object.keys(obj)
+  return keys.reduce((acc, key) => {
+    acc[obj[key]] = key
+    return acc
+  }, {})
+}
+
+/**
+ * @description 获取对象中所有的key,包括深层的（a.b形式）
+ * @param obj 
+ */
+export function keys (obj: any): any {
+  if (!obj) return []
+
+  const result: string[] = []
+  const getKeys = (nested: any, paths: string[]): void => {
+    if (isObject(nested)) {
+      Object.entries(nested).flatMap(([k, v]) => getKeys(v, [...paths, k]))
+    }
+    if (isArray(nested)) {
+      // 将索引 `i` 转换为字符串
+      nested.flatMap((item, i) => getKeys(item, [...paths, `${i}`]))
+    }
+    result.push(paths.join('.'))
+    return
+  }
+
+  return getKeys(obj, [])
 }

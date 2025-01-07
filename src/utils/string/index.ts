@@ -88,3 +88,16 @@ export function uid (length: number, specials: string = ''): string {
     ''
   )
 }
+
+/**
+ * @description 根据数据对象来替换字符串中的模板占位符
+ * @param str 
+ * @param data 数据对象
+ * @param regex 
+ * @returns 
+ */
+export function template (str: string, data: any, regex = /\{\{(.+?)\}\}/g) : string {
+  return Array.from(str.matchAll(regex)).reduce((acc, match) => {
+    return acc.replace(match[0], data[match[1]])
+  }, str)
+}

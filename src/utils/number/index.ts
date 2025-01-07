@@ -27,3 +27,37 @@ export function isInt (value: any): value is number {
   return isNumber(value) && value % 1 === 0
 }
 
+/**
+ * @description 检查给定数字是否在两个数字之间
+ * @param number 
+ * @param start 
+ * @param end 
+ * @returns 
+ */
+export function isRange (number, start, end): boolean {
+  const isTypeSafe = typeof number === 'number' && typeof start === 'number' && (typeof end === 'undefined' || typeof end === 'number')
+
+  if (!isTypeSafe) return false
+
+  if (typeof end === 'undefined') {
+    end = start
+    start = 0
+  }
+
+  return number >= Math.min(start, end) && number <= Math.max(start, end)
+}
+
+/**
+ * @description 将值转为浮点值
+ * @param value 
+ * @param defaultValue 
+ * @returns 
+ */
+export function toFloat (value, defaultValue): any {
+  const def = defaultValue === void 0 ? 0 : defaultValue
+
+  if (value === null || value === void 0) return def
+
+  const result = parseFloat(value)
+  return isNaN(result)? def : result
+}
