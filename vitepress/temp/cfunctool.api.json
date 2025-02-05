@@ -1,0 +1,811 @@
+{
+  "metadata": {
+    "toolPackage": "@microsoft/api-extractor",
+    "toolVersion": "7.49.2",
+    "schemaVersion": 1011,
+    "oldestForwardsCompatibleVersion": 1001,
+    "tsdocConfig": {
+      "$schema": "https://developer.microsoft.com/json-schemas/tsdoc/v0/tsdoc.schema.json",
+      "noStandardTags": true,
+      "tagDefinitions": [
+        {
+          "tagName": "@alpha",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@beta",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@defaultValue",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@decorator",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@deprecated",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@eventProperty",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@example",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@experimental",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@inheritDoc",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@internal",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@label",
+          "syntaxKind": "inline"
+        },
+        {
+          "tagName": "@link",
+          "syntaxKind": "inline",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@override",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@packageDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@param",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@privateRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@public",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@readonly",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@remarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@returns",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@sealed",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@see",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@throws",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@typeParam",
+          "syntaxKind": "block",
+          "allowMultiple": true
+        },
+        {
+          "tagName": "@virtual",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@betaDocumentation",
+          "syntaxKind": "modifier"
+        },
+        {
+          "tagName": "@internalRemarks",
+          "syntaxKind": "block"
+        },
+        {
+          "tagName": "@preapproved",
+          "syntaxKind": "modifier"
+        }
+      ],
+      "supportForTags": {
+        "@alpha": true,
+        "@beta": true,
+        "@defaultValue": true,
+        "@decorator": true,
+        "@deprecated": true,
+        "@eventProperty": true,
+        "@example": true,
+        "@experimental": true,
+        "@inheritDoc": true,
+        "@internal": true,
+        "@label": true,
+        "@link": true,
+        "@override": true,
+        "@packageDocumentation": true,
+        "@param": true,
+        "@privateRemarks": true,
+        "@public": true,
+        "@readonly": true,
+        "@remarks": true,
+        "@returns": true,
+        "@sealed": true,
+        "@see": true,
+        "@throws": true,
+        "@typeParam": true,
+        "@virtual": true,
+        "@betaDocumentation": true,
+        "@internalRemarks": true,
+        "@preapproved": true
+      },
+      "reportUnsupportedHtmlElements": false
+    }
+  },
+  "kind": "Package",
+  "canonicalReference": "cfunctool!",
+  "docComment": "",
+  "name": "cfunctool",
+  "preserveMemberOrder": false,
+  "members": [
+    {
+      "kind": "EntryPoint",
+      "canonicalReference": "cfunctool!",
+      "name": "",
+      "preserveMemberOrder": false,
+      "members": [
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!diffArray:function(1)",
+          "docComment": "/**\n * 计算两个数组的差集，返回在 root 数组中存在但在 other 数组中不存在的元素。\n *\n * @param root - 基准数组。\n *\n * @param other - 要比较的数组。\n *\n * @param getter - 用于从数组元素中提取键值的函数。\n *\n * @returns 返回一个数组，包含在 root 数组中存在但在 other 数组中不存在的元素。\n *\n * @example\n *\n * const root = [{ id: 'a' }, { id: 'b' }, { id: 'c' }]; const other = [{ id: 'b' }, { id: 'd' }]; const getter = (obj) => obj.id; console.log(diffArray(root, other, getter)); // 输出: [{ id: 'a' }, { id: 'c' }]\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function diffArray(root: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", other: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", getter: "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: any) => string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 9,
+            "endIndex": 10
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "root",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "other",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 6
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "getter",
+              "parameterTypeTokenRange": {
+                "startIndex": 7,
+                "endIndex": 8
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "diffArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!filterObjectArray:function(1)",
+          "docComment": "/**\n * 使用比较函数过滤对象数组。\n *\n * @param array - 要过滤的对象数组。\n *\n * @param compareFunc - 用于比较数组元素的函数，该函数接收两个参数并返回一个值。\n *\n * @returns 如果数组不存在或为空则返回 null，否则返回通过 `compareFunc` 归约后的结果。\n *\n * @example\n *\n * const array = [{ id: 1, value: 10 }, { id: 2, value: 20 }]; const compareFunc = (acc, curr) => acc.value > curr.value ? acc : curr; console.log(filterObjectArray(array, compareFunc)); // 输出: { id: 2, value: 20 }\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function filterObjectArray(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", compareFunc: "
+            },
+            {
+              "kind": "Content",
+              "text": "(a: any, b: any) => any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "compareFunc",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "filterObjectArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isArray:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为数组。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是数组则返回 `true`，否则返回 `false`。\n *\n * @example\n * ```typescript\n * isArray([]); // 返回 true\n * isArray({}); // 返回 false\n * isArray('hello'); // 返回 false\n * isArray([1, 2, 3]); // 返回 true\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isArray(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isArrayExist:function(1)",
+          "docComment": "/**\n * 检查数组是否存在且不为空。\n *\n * @param array - 要检查的数组。\n *\n * @returns 如果数组不存在或为空则返回 true，否则返回 false。\n *\n * @example\n *\n * const array1 = []; const array2 = [1, 2, 3]; const array3 = null; console.log(isArrayExist(array1)); // 输出: true console.log(isArrayExist(array2)); // 输出: false console.log(isArrayExist(array3)); // 输出: true\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isArrayExist(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 4,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isArrayExist"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!random:function(1)",
+          "docComment": "/**\n * 生成一个在指定范围内的随机整数。\n *\n * @param min - 随机数的最小值（包含）。\n *\n * @param max - 随机数的最大值（包含）。\n *\n * @returns 返回一个在 min 和 max 之间的随机整数。\n *\n * @example\n *\n * console.log(random(1, 5)); // 输出: 1 或 2 或 3 或 4 或 5（随机）\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function random(min: "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": ", max: "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "min",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "max",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "random"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!randomDraw:function(1)",
+          "docComment": "/**\n * 从数组中随机抽取一个元素。\n *\n * @param array - 要从中抽取元素的数组。\n *\n * @returns 返回数组中的一个随机元素，如果数组为空则返回 null。\n *\n * @example\n *\n * const array = [1, 2, 3, 4, 5]; console.log(randomDraw(array)); // 输出: 1 或 2 或 3 或 4 或 5（随机）\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function randomDraw(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 4,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "randomDraw"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!shuffle:function(1)",
+          "docComment": "/**\n * 随机打乱数组中元素的顺序。\n *\n * @param array - 要打乱的数组。\n *\n * @returns 返回一个元素顺序被打乱的新数组。\n *\n * @example\n *\n * const array = [1, 2, 3, 4, 5]; console.log(shuffle(array)); // 输出: [3, 1, 5, 2, 4] 或其他随机顺序\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function shuffle(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 4,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "shuffle"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!sortObjectArray:function(1)",
+          "docComment": "/**\n * @description 根据选定key的value的字母顺序，将对象数组排列\n *\n * @param array - \n *\n * @param getter - \n *\n * @param dir - \n *\n * @returns \n *\n * @example\n * ```Javascript\n * const ig = [\n * { name: 'ning', power: 100},\n * { name: 'rookie', power: 98},\n * { name: 'jkl', power: 95},\n * { name: 'theshy', power: 100}\n * ]\n * sortObjectArray(ig, g => g.name) // => [jkl, ning, rookie, theshy]\n * sortObjectArray(ig, g => g.name, 'desc') // => [theshy, rookie, ning, jkl]\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function sortObjectArray(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", getter: "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: any) => string"
+            },
+            {
+              "kind": "Content",
+              "text": ", dir?: "
+            },
+            {
+              "kind": "Content",
+              "text": "'asc' | 'dsc'"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 8,
+            "endIndex": 10
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "getter",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "dir",
+              "parameterTypeTokenRange": {
+                "startIndex": 6,
+                "endIndex": 7
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "sortObjectArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!splitArray:function(1)",
+          "docComment": "/**\n * 将数组分割成指定大小的子数组。\n *\n * @param array - 要分割的数组。\n *\n * @param size - 每个子数组的大小，默认为 2。\n *\n * @returns 返回一个包含多个子数组的数组，每个子数组的大小不超过指定的 size。\n *\n * @example\n *\n * const array = [1, 2, 3, 4, 5]; console.log(splitArray(array, 2)); // 输出: [[1, 2], [3, 4], [5]] console.log(splitArray(array, 3)); // 输出: [[1, 2, 3], [4, 5]]\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function splitArray(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", size?: "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "size",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "splitArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!valCountObjectArray:function(1)",
+          "docComment": "/**\n * 根据指定的 getter 函数统计数组中每个值的出现次数。\n *\n * @param array - 要统计的数组。\n *\n * @param getter - 用于从数组元素中提取键值的函数。\n *\n * @returns 返回一个对象，其中键是通过 getter 提取的值，值是该值在数组中出现的次数。\n *\n * @example\n *\n * const array = [{ id: 'a' }, { id: 'b' }, { id: 'a' }]; const getter = (obj) => obj.id; console.log(valCountObjectArray(array, getter)); // 输出: { a: 2, b: 1 }\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function valCountObjectArray(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", getter: "
+            },
+            {
+              "kind": "Content",
+              "text": "(obj: any) => string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "getter",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 5
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "valCountObjectArray"
+        }
+      ]
+    }
+  ]
+}

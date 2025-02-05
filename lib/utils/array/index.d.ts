@@ -1,11 +1,9 @@
-// import { isEmpty, isEqType } from "../common/index"
-
 /**
  * 检查给定的值是否为数组。
- * 
+ *
  * @param value - 要检查的值。
  * @returns 如果值是数组则返回 `true`，否则返回 `false`。
- * 
+ *
  * @example
  * ```typescript
  * isArray([]); // 返回 true
@@ -14,45 +12,7 @@
  * isArray([1, 2, 3]); // 返回 true
  * ```
  */
-export function isArray(value: any): boolean {
-  return Array.isArray(value)
-}
-
-// /**
-//  * 比较两个数组是否相等。
-//  *
-//  * @param v1 - 第一个数组，用于比较的源数组。
-//  * @param v2 - 第二个数组，用于比较的目标数组。
-//  * @returns 如果两个数组在每个位置上的元素都相等则返回 true，否则返回 false。
-//  * @example
-//  * const array1 = [1, 2, 3];
-//  * const array2 = [1, 2, 3];
-//  * const array3 = [1, 2, 4];
-//  * console.log(isEqArray(array1, array2)); // 输出: true
-//  * console.log(isEqArray(array1, array3)); // 输出: false
-//  */
-// export function isEqArray(v1:Array<any>, v2: Array<any>): boolean {
-//   let len = v1.length
-//   for (let i = 0; i < len; i++) {
-//     const flag = isEqType(v1[i], v2[i])
-//     if (!flag) return false
-//   }
-//   return true
-// }
-
-// /**
-//  * @description 返回所有非空元素的数组
-//  * @param array 
-//  * @returns 含非空元素的数组
-//  * @example
-//  * ```JavaScript
-//  *    let arr =[1,2,3,null,undefined,4,[],{},NaN]; getRelArray(arr)=> [1,2,3,4]
-//  * ```
-//  */
-// export function getRealArray(array: Array<any>): Array<any> {
-//   return array.filter(item => isEmpty(item))
-// }
-
+export declare function isArray(value: any): boolean;
 /**
  * 检查数组是否存在且不为空。
  *
@@ -66,17 +26,13 @@ export function isArray(value: any): boolean {
  * console.log(isArrayExist(array2)); // 输出: false
  * console.log(isArrayExist(array3)); // 输出: true
  */
-export function isArrayExist(array: Array<any>): boolean {
-  return !array || (array.length ?? 0) === 0
-}
-
-
+export declare function isArrayExist(array: Array<any>): boolean;
 /**
  * @description 根据选定key的value的字母顺序，将对象数组排列
- * @param array 
- * @param getter 
- * @param dir 
- * @returns 
+ * @param array
+ * @param getter
+ * @param dir
+ * @returns
  * @example
  * ```Javascript
  * const ig = [
@@ -85,21 +41,11 @@ export function isArrayExist(array: Array<any>): boolean {
  * { name: 'jkl', power: 95},
  * { name: 'theshy', power: 100}
  * ]
- * sortObjectArray(ig, g => g.name) // => [jkl, ning, rookie, theshy]  
- * sortObjectArray(ig, g => g.name, 'desc') // => [theshy, rookie, ning, jkl]  
+ * sortObjectArray(ig, g => g.name) // => [jkl, ning, rookie, theshy]
+ * sortObjectArray(ig, g => g.name, 'desc') // => [theshy, rookie, ning, jkl]
  * ```
  */
-export function sortObjectArray (array: Array<any>, getter: (obj: any) => string, dir: 'asc' | 'dsc' = 'asc'): Array<any> {
-  if (!array) return []
-
-  const asc = (a: any, b: any) => getter(a).localeCompare(getter(b))
-
-  const dsc = (a: any, b: any) => getter(b).localeCompare(getter(a))
-
-  // 使用 `slice` 方法克隆数组，避免修改原数组，然后根据 `dir` 参数选择排序函数进行排序
-  return array.slice().sort(dir === 'dsc' ? dsc : asc)
-}
-
+export declare function sortObjectArray(array: Array<any>, getter: (obj: any) => string, dir?: 'asc' | 'dsc'): Array<any>;
 /**
  * 使用比较函数过滤对象数组。
  *
@@ -111,13 +57,7 @@ export function sortObjectArray (array: Array<any>, getter: (obj: any) => string
  * const compareFunc = (acc, curr) => acc.value > curr.value ? acc : curr;
  * console.log(filterObjectArray(array, compareFunc)); // 输出: { id: 2, value: 20 }
  */
-export function filterObjectArray (array: Array<any>, compareFunc: (a: any, b: any) => any): any {
-  if (!array || (array.length ?? 0) === 0) return null
-
-  // 使用数组的 `reduce` 方法应用 `compareFunc`，将数组归约为单一的值。
-  return array.reduce(compareFunc)
-}
-
+export declare function filterObjectArray(array: Array<any>, compareFunc: (a: any, b: any) => any): any;
 /**
  * 将数组分割成指定大小的子数组。
  *
@@ -129,17 +69,7 @@ export function filterObjectArray (array: Array<any>, compareFunc: (a: any, b: a
  * console.log(splitArray(array, 2)); // 输出: [[1, 2], [3, 4], [5]]
  * console.log(splitArray(array, 3)); // 输出: [[1, 2, 3], [4, 5]]
  */
-export function splitArray (array: Array<any>, size: number = 2): Array<any> {
-  if (!array || (array.length ?? 0) === 0) return []
-
-  const count = Math.ceil(array.length / size)
-  
-  // 创建新数组，初始填充为null
-  return new Array(count).fill(null).map((_val: null, idx: number) => {
-    return array.slice(idx * size, idx * size + size)
-  })
-}
-
+export declare function splitArray(array: Array<any>, size?: number): Array<any>;
 /**
  * 根据指定的 getter 函数统计数组中每个值的出现次数。
  *
@@ -151,16 +81,7 @@ export function splitArray (array: Array<any>, size: number = 2): Array<any> {
  * const getter = (obj) => obj.id;
  * console.log(valCountObjectArray(array, getter)); // 输出: { a: 2, b: 1 }
  */
-export function valCountObjectArray (array: Array<any>, getter: (obj: any) => string): any {
-  if (!array || (array.length ?? 0) == 0) return {}
-
-  return array.reduce((acc, item) => {
-    const id = getter(item)
-    acc[id] = (acc[id] ?? 0) + 1
-    return acc
-  }, {})  // 初始化为一个空对象
-}
-
+export declare function valCountObjectArray(array: Array<any>, getter: (obj: any) => string): any;
 /**
  * 计算两个数组的差集，返回在 root 数组中存在但在 other 数组中不存在的元素。
  *
@@ -174,21 +95,7 @@ export function valCountObjectArray (array: Array<any>, getter: (obj: any) => st
  * const getter = (obj) => obj.id;
  * console.log(diffArray(root, other, getter)); // 输出: [{ id: 'a' }, { id: 'c' }]
  */
-export function diffArray (root: Array<any>, other: Array<any>, getter: (obj: any) => string): any {
-  if (!root?.length && !other?.length) return []
-  // 等价 !root || (root.length ?? 0) == 0
-  if (root?.length === void 0) return [...other]
-  if (!other?.length) return [...root]
-
-  // other中存在，将其标记为true
-  const bKeys = other.reduce((acc, item) => {
-    acc[getter(item)] = true
-    return acc
-  }, {})
-
-  return root.filter(item => !bKeys[getter(item)])
-}
-
+export declare function diffArray(root: Array<any>, other: Array<any>, getter: (obj: any) => string): any;
 /**
  * 从数组中随机抽取一个元素。
  *
@@ -198,14 +105,7 @@ export function diffArray (root: Array<any>, other: Array<any>, getter: (obj: an
  * const array = [1, 2, 3, 4, 5];
  * console.log(randomDraw(array)); // 输出: 1 或 2 或 3 或 4 或 5（随机）
  */
-export function randomDraw (array: Array<any>): any {
-  const max = array.length
-  if (max === 0) return null
-
-  const index = random(0, max - 1)
-  return array[index]
-}
-
+export declare function randomDraw(array: Array<any>): any;
 /**
  * 生成一个在指定范围内的随机整数。
  *
@@ -215,10 +115,7 @@ export function randomDraw (array: Array<any>): any {
  * @example
  * console.log(random(1, 5)); // 输出: 1 或 2 或 3 或 4 或 5（随机）
  */
-export function random (min: number, max: number): number {
-  return Math.floor(Math.random() * (max - min + 1) + min)
-}
-
+export declare function random(min: number, max: number): number;
 /**
  * 随机打乱数组中元素的顺序。
  *
@@ -228,10 +125,4 @@ export function random (min: number, max: number): number {
  * const array = [1, 2, 3, 4, 5];
  * console.log(shuffle(array)); // 输出: [3, 1, 5, 2, 4] 或其他随机顺序
  */
-export function shuffle(array: Array<any>): any {
-  return array
-    // 将数组每个元素转为包含随机数和原始值的对象
-    .map(item => ({rand: Math.random(), value: item}))
-    .sort((a, b) => a.rand - b.rand)
-    .map(item => item.value)
-}
+export declare function shuffle(array: Array<any>): any;

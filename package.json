@@ -1,0 +1,41 @@
+{
+  "name": "cfunctool",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "npx rollup -c",
+    "tsc": "tsc -p tsconfig.json",
+    "api-extractor": "api-extractor run --local --verbose ",
+    "api-documenter": "api-documenter markdown -i vitepress/temp -o vitepress/etc/doc",
+    "docs:prepare": "npm run tsc && npm run api-extractor && npm run api-documenter",
+    "docs:dev": "vitepress dev vitepress",
+    "docs:build": "vitepress build vitepress",
+    "docs:preview": "vitepress preview docs",
+    "genDoc": "gulp --gulpfile scripts/genDoc.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.22.20",
+    "@babel/plugin-transform-modules-commonjs": "^7.23.0",
+    "@babel/preset-env": "^7.22.20",
+    "@babel/preset-typescript": "^7.22.15",
+    "@microsoft/api-documenter": "^7.26.7",
+    "@microsoft/api-extractor": "^7.49.2",
+    "@rollup/plugin-alias": "^5.0.0",
+    "@rollup/plugin-babel": "^6.0.3",
+    "@rollup/plugin-terser": "^0.4.3",
+    "chalk": "^2.4.2",
+    "gulp": "^5.0.0",
+    "rollup": "^3.29.2",
+    "rollup-plugin-dts": "^6.0.2",
+    "rollup-plugin-typescript2": "^0.35.0",
+    "rollup-plugin-visualizer": "^5.14.0",
+    "vitepress": "^1.0.0-rc.20"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  }
+}

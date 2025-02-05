@@ -1,0 +1,38 @@
+/**
+  https://api-extractor.com/pages/setup/invoking/#3-create-a-template-config-file
+*/
+{
+    "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
+    "mainEntryPointFilePath": "<projectFolder>/lib/index.d.ts",
+    "bundledPackages": [],
+    "compiler": {},
+    "apiReport": {
+      "enabled": true,
+      "reportTempFolder": "./vitepress/temp/"
+    },
+    "docModel": {
+      "enabled": true,
+      "apiJsonFilePath": "./vitepress/temp/cfunctool.api.json"
+    },
+    "dtsRollup": {
+      "enabled": true
+    },
+    "tsdocMetadata": {},
+    "messages": {
+      "compilerMessageReporting": {
+        "default": {
+          "logLevel": "warning"
+        }
+      },
+      "extractorMessageReporting": {
+        "default": {
+          "logLevel": "warning"
+        }
+      },
+      "tsdocMessageReporting": {
+        "default": {
+          "logLevel": "warning"
+        }
+      }
+    }
+  }
