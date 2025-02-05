@@ -1,4 +1,4 @@
-import { isEqArray } from "../array";
+import { isEqArray } from "../../array/index";
 
 
 /**
@@ -97,11 +97,20 @@ export function hasTypeIn (value: any, types: Array<string>): boolean {
 }
 
 /**
- * 检查数据是否为简单数据类型
- * @param value 
- * 
- * let num = 12; isSimpleType(num) => true
- * let f = function () {}; isSimpleType(f) => false
+ * 检查给定的值是否为简单类型。
+ *
+ * 简单类型包括 undefined、null、boolean、number、string 和 symbol。
+ *
+ * @param value - 要检查的值。
+ * @returns 如果值是简单类型则返回 true，否则返回 false。
+ * @example
+ * console.log(isSimpleType(true));        // 输出: true
+ * console.log(isSimpleType(42));          // 输出: true
+ * console.log(isSimpleType('hello'));     // 输出: true
+ * console.log(isSimpleType(null));        // 输出: true
+ * console.log(isSimpleType(undefined));    // 输出: true
+ * console.log(isSimpleType({}));          // 输出: false
+ * console.log(isSimpleType(() => {}));     // 输出: false
  */
 export function isSimpleType (value: any): boolean {
   if (isNull(value)) return true;
@@ -110,11 +119,19 @@ export function isSimpleType (value: any): boolean {
 }
 
 /**
- * 检查数据是否为引用数据类型
- * @param value 
- * 
- * let num = 12; isRefType(num) => false
- * let f = function () {}; isRefType(f) => true
+ * 检查给定的值是否为引用类型。
+ *
+ * 引用类型包括对象、数组、函数等。
+ *
+ * @param value - 要检查的值。
+ * @returns 如果值是引用类型则返回 true，否则返回 false。
+ * @example
+ * console.log(isRefType({}));          // 输出: true
+ * console.log(isRefType([]));          // 输出: true
+ * console.log(isRefType(() => {}));     // 输出: true
+ * console.log(isRefType(true));        // 输出: false
+ * console.log(isRefType(42));          // 输出: false
+ * console.log(isRefType('hello'));     // 输出: false
  */
 export function isRefType (value: any): boolean {
   return value instanceof Object;
@@ -122,8 +139,8 @@ export function isRefType (value: any): boolean {
 
 /**
  * 检查两个数据的类型是否相等
- * @param value1 
- * @param value2 
+ * @param value1 - 第一个要比较的值。
+ * @param value2 - 第二个要比较的值。
  * @returns 
  * @example
  * ```JavaScript
@@ -143,8 +160,8 @@ export function isEqType (value1: any, value2: any): boolean {
 
 /**
  * 检查比较的两个参数是否相等，包括其值和类型是否相等，考虑顺序。
- * @param value1 
- * @param value2 
+ * @param value1 - 第一个要比较的值。
+ * @param value2 - 第二个要比较的值。
  * @returns 布尔值
  * @example
  * ```JavaScript
