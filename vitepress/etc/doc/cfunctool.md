@@ -19,6 +19,72 @@ Description
 </th></tr></thead>
 <tbody><tr><td>
 
+[camel(str)](./cfunctool.camel.md)
+
+
+</td><td>
+
+将字符串转换为驼峰命名法。
+
+
+</td></tr>
+<tr><td>
+
+[capitalize(str)](./cfunctool.capitalize.md)
+
+
+</td><td>
+
+将字符串的首字母大写，其余字母小写。
+
+
+</td></tr>
+<tr><td>
+
+[chain(funcs)](./cfunctool.chain.md)
+
+
+</td><td>
+
+创建一个函数链，依次执行给定的函数。
+
+
+</td></tr>
+<tr><td>
+
+[clone(obj)](./cfunctool.clone.md)
+
+
+</td><td>
+
+克隆给定的对象。
+
+
+</td></tr>
+<tr><td>
+
+[dash(str)](./cfunctool.dash.md)
+
+
+</td><td>
+
+将字符串转换为 kebab-case（短横线命名法）。
+
+
+</td></tr>
+<tr><td>
+
+[debounce({ delay }, func)](./cfunctool.debounce.md)
+
+
+</td><td>
+
+创建一个防抖函数，限制函数在指定时间间隔内只执行一次。
+
+
+</td></tr>
+<tr><td>
+
 [diffArray(root, other, getter)](./cfunctool.diffarray.md)
 
 
@@ -36,6 +102,61 @@ Description
 </td><td>
 
 使用比较函数过滤对象数组。
+
+
+</td></tr>
+<tr><td>
+
+[getRealArray(array)](./cfunctool.getrealarray.md)
+
+
+</td><td>
+
+ 返回所有非空元素的数组
+
+
+</td></tr>
+<tr><td>
+
+[getStringType(value)](./cfunctool.getstringtype.md)
+
+
+</td><td>
+
+ 返回数据的类型
+
+
+</td></tr>
+<tr><td>
+
+[hasTypeIn(value, types)](./cfunctool.hastypein.md)
+
+
+</td><td>
+
+ 返回数据是否属于给定的类型中
+
+
+</td></tr>
+<tr><td>
+
+[invert(obj)](./cfunctool.invert.md)
+
+
+</td><td>
+
+反转对象的键和值。
+
+
+</td></tr>
+<tr><td>
+
+[is(value, type)](./cfunctool.is.md)
+
+
+</td><td>
+
+ 返回数据是否是判断的类型
 
 
 </td></tr>
@@ -63,6 +184,230 @@ Description
 </td></tr>
 <tr><td>
 
+[isBoolean(value)](./cfunctool.isboolean.md)
+
+
+</td><td>
+
+检查给定的值是否为布尔类型。
+
+
+</td></tr>
+<tr><td>
+
+[isDate(value)](./cfunctool.isdate.md)
+
+
+</td><td>
+
+检查给定的值是否为 Date 类型。
+
+
+</td></tr>
+<tr><td>
+
+[isEmpty(value)](./cfunctool.isempty.md)
+
+
+</td><td>
+
+返回判断的数据是否为空
+
+
+</td></tr>
+<tr><td>
+
+[isEqArray(v1, v2)](./cfunctool.iseqarray.md)
+
+
+</td><td>
+
+比较两个数组是否相等。
+
+
+</td></tr>
+<tr><td>
+
+[isEqType(value1, value2)](./cfunctool.iseqtype.md)
+
+
+</td><td>
+
+检查两个数据的类型是否相等
+
+
+</td></tr>
+<tr><td>
+
+[isEqValue(value1, value2)](./cfunctool.iseqvalue.md)
+
+
+</td><td>
+
+检查比较的两个参数是否相等，包括其值和类型是否相等，考虑顺序。
+
+
+</td></tr>
+<tr><td>
+
+[isFloat(value)](./cfunctool.isfloat.md)
+
+
+</td><td>
+
+检查给定的值是否为浮点数。
+
+
+</td></tr>
+<tr><td>
+
+[isFunction(value)](./cfunctool.isfunction.md)
+
+
+</td><td>
+
+检查给定的值是否为函数类型。
+
+
+</td></tr>
+<tr><td>
+
+[isInt(value)](./cfunctool.isint.md)
+
+
+</td><td>
+
+检查给定的值是否为整数。
+
+
+</td></tr>
+<tr><td>
+
+[isNull(value)](./cfunctool.isnull.md)
+
+
+</td><td>
+
+ 返回数据是否是null,为空
+
+
+</td></tr>
+<tr><td>
+
+[isNumber(value)](./cfunctool.isnumber.md)
+
+
+</td><td>
+
+检查给定的值是否为数字类型。
+
+
+</td></tr>
+<tr><td>
+
+[isObject(value)](./cfunctool.isobject.md)
+
+
+</td><td>
+
+检查给定的值是否为普通对象。
+
+
+</td></tr>
+<tr><td>
+
+[isPromise(value)](./cfunctool.ispromise.md)
+
+
+</td><td>
+
+检查给定的值是否为 Promise 对象。
+
+
+</td></tr>
+<tr><td>
+
+[isRange(number, start, end)](./cfunctool.isrange.md)
+
+
+</td><td>
+
+检查给定的数字是否在指定范围内。
+
+
+</td></tr>
+<tr><td>
+
+[isRefType(value)](./cfunctool.isreftype.md)
+
+
+</td><td>
+
+检查给定的值是否为引用类型。
+
+引用类型包括对象、数组、函数等。
+
+
+</td></tr>
+<tr><td>
+
+[isSimpleType(value)](./cfunctool.issimpletype.md)
+
+
+</td><td>
+
+检查给定的值是否为简单类型。
+
+简单类型包括 undefined、null、boolean、number、string 和 symbol。
+
+
+</td></tr>
+<tr><td>
+
+[isUndefined(value)](./cfunctool.isundefined.md)
+
+
+</td><td>
+
+ 返回数据是否是undefined,为未定义
+
+
+</td></tr>
+<tr><td>
+
+[iterate(length, func, initValue)](./cfunctool.iterate.md)
+
+
+</td><td>
+
+迭代执行给定的函数指定次数，并返回最终结果。
+
+
+</td></tr>
+<tr><td>
+
+[keys(obj)](./cfunctool.keys.md)
+
+
+</td><td>
+
+获取对象的所有键路径。
+
+
+</td></tr>
+<tr><td>
+
+[pascal(str)](./cfunctool.pascal.md)
+
+
+</td><td>
+
+将字符串转换为 PascalCase（帕斯卡命名法）。
+
+
+</td></tr>
+<tr><td>
+
 [random(min, max)](./cfunctool.random.md)
 
 
@@ -80,6 +425,17 @@ Description
 </td><td>
 
 从数组中随机抽取一个元素。
+
+
+</td></tr>
+<tr><td>
+
+[series(arrays, toKey)](./cfunctool.series.md)
+
+
+</td><td>
+
+创建一个系列对象，提供对数组中元素的便捷访问方法。
 
 
 </td></tr>
@@ -113,6 +469,50 @@ Description
 </td><td>
 
 将数组分割成指定大小的子数组。
+
+
+</td></tr>
+<tr><td>
+
+[template(str, data, regex)](./cfunctool.template.md)
+
+
+</td><td>
+
+使用提供的数据替换字符串中的模板占位符。
+
+
+</td></tr>
+<tr><td>
+
+[throttle({ interval }, func)](./cfunctool.throttle.md)
+
+
+</td><td>
+
+创建一个节流函数，限制函数在指定时间间隔内只执行一次。
+
+
+</td></tr>
+<tr><td>
+
+[toFloat(value, defaultValue)](./cfunctool.tofloat.md)
+
+
+</td><td>
+
+将给定的值转换为浮点数。
+
+
+</td></tr>
+<tr><td>
+
+[uid(length, specials)](./cfunctool.uid.md)
+
+
+</td><td>
+
+生成指定长度的唯一标识符（UID）。
 
 
 </td></tr>

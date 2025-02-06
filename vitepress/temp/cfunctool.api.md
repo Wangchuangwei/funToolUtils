@@ -5,10 +5,45 @@
 ```ts
 
 // @public
+export function camel(str: string): string;
+
+// @public
+export function capitalize(str: string): string;
+
+// @public
+export function chain(...funcs: ((...args: any[]) => any)[]): any;
+
+// @public
+export function clone(obj: any): any;
+
+// @public
+export function dash(str: string): string;
+
+// @public
+export function debounce({ delay }: {
+    delay: number;
+}, func: (...args: any[]) => any): any;
+
+// @public
 export function diffArray(root: Array<any>, other: Array<any>, getter: (obj: any) => string): any;
 
 // @public
 export function filterObjectArray(array: Array<any>, compareFunc: (a: any, b: any) => any): any;
+
+// @public
+export function getRealArray(array: Array<any>): Array<any>;
+
+// @public
+export function getStringType(value: any): string;
+
+// @public
+export function hasTypeIn(value: any, types: Array<string>): boolean;
+
+// @public
+export function invert(obj: Record<any, string>): Record<any, string>;
+
+// @public
+export function is(value: any, type: string): boolean;
 
 // @public
 export function isArray(value: any): boolean;
@@ -17,10 +52,73 @@ export function isArray(value: any): boolean;
 export function isArrayExist(array: Array<any>): boolean;
 
 // @public
+export function isBoolean(value: any): value is boolean;
+
+// @public
+export function isDate(value: any): value is Date;
+
+// @public
+export function isEmpty(value: any): boolean;
+
+// @public
+export function isEqArray(v1: Array<any>, v2: Array<any>): boolean;
+
+// @public
+export function isEqType(value1: any, value2: any): boolean;
+
+// @public
+export function isEqValue(value1: any, value2: any): boolean;
+
+// @public
+export function isFloat(value: any): value is number;
+
+// @public
+export function isFunction(value: any): value is Function;
+
+// @public
+export function isInt(value: any): value is number;
+
+// @public
+export function isNull(value: any): boolean;
+
+// @public
+export function isNumber(value: any): value is number;
+
+// @public
+export function isObject(value: any): value is object;
+
+// @public
+export function isPromise(value: any): value is Promise<any>;
+
+// @public
+export function isRange(number: any, start: any, end?: any): boolean;
+
+// @public
+export function isRefType(value: any): boolean;
+
+// @public
+export function isSimpleType(value: any): boolean;
+
+// @public
+export function isUndefined(value: any): boolean;
+
+// @public
+export function iterate(length: number, func: (current: string) => string, initValue: string): string;
+
+// @public
+export function keys(obj: any): any;
+
+// @public
+export function pascal(str: string): string;
+
+// @public
 export function random(min: number, max: number): number;
 
 // @public
 export function randomDraw(array: Array<any>): any;
+
+// @public
+export function series(arrays: any, toKey?: (item: any) => any): any;
 
 // @public
 export function shuffle(array: Array<any>): any;
@@ -30,6 +128,20 @@ export function sortObjectArray(array: Array<any>, getter: (obj: any) => string,
 
 // @public
 export function splitArray(array: Array<any>, size?: number): Array<any>;
+
+// @public
+export function template(str: string, data: any, regex?: RegExp): string;
+
+// @public
+export function throttle({ interval }: {
+    interval: number;
+}, func: (...args: any[]) => any): any;
+
+// @public
+export function toFloat(value: any, defaultValue?: any): any;
+
+// @public
+export function uid(length: number, specials?: string): string;
 
 // @public
 export function valCountObjectArray(array: Array<any>, getter: (obj: any) => string): any;

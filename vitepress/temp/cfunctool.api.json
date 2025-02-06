@@ -174,6 +174,292 @@
       "members": [
         {
           "kind": "Function",
+          "canonicalReference": "cfunctool!camel:function(1)",
+          "docComment": "/**\n * 将字符串转换为驼峰命名法。\n *\n * @param str - 要转换的字符串。\n *\n * @returns 返回转换后的驼峰命名法字符串。\n *\n * @example\n *\n * console.log(camel('hello_world')); // 输出: helloWorld console.log(camel('hello-world')); // 输出: helloWorld console.log(camel('hello.world')); // 输出: helloWorld console.log(camel('HelloWorld')); // 输出: helloWorld\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function camel(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "camel"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!capitalize:function(1)",
+          "docComment": "/**\n * 将字符串的首字母大写，其余字母小写。\n *\n * @param str - 要转换的字符串。\n *\n * @returns 返回首字母大写、其余字母小写的字符串。\n *\n * @example\n *\n * console.log(capitalize('hello')); // 输出: Hello console.log(capitalize('WORLD')); // 输出: World console.log(capitalize('')); // 输出: '' console.log(capitalize('a')); // 输出: A\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function capitalize(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "capitalize"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!chain:function(1)",
+          "docComment": "/**\n * 创建一个函数链，依次执行给定的函数。\n *\n * @param funcs - 一个由函数组成的数组，这些函数将会被依次执行。 每个函数都可以接受任意参数，并返回任何类型的值。\n *\n * @returns 返回一个新的函数，该函数接受任意参数，并依次将这些参数传递给第一个函数。 每个函数的返回值将作为下一个函数的输入。\n *\n * @example\n *\n * const addOne = (x: number) => x + 1; const double = (x: number) => x * 2; const chainedFunction = chain(addOne, double); console.log(chainedFunction(5)); // 输出: 12 (5 + 1 = 6, 6 * 2 = 12)\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function chain(...funcs: "
+            },
+            {
+              "kind": "Content",
+              "text": "((...args: any[]) => any)[]"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/function/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "funcs",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "chain"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!clone:function(1)",
+          "docComment": "/**\n * 克隆给定的对象。\n *\n * @param obj - 要克隆的对象。\n *\n * @returns 返回克隆后的对象。\n *\n * @example\n *\n * const original = { a: 1, b: { c: 2 } }; const cloned = clone(original); console.log(cloned); // 输出: { a: 1, b: { c: 2 } } console.log(cloned === original); // 输出: false console.log(cloned.b === original.b); // 输出: true\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function clone(obj: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/object/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "obj",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "clone"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!dash:function(1)",
+          "docComment": "/**\n * 将字符串转换为 kebab-case（短横线命名法）。\n *\n * @param str - 要转换的字符串。\n *\n * @returns 返回转换后的 kebab-case 字符串。\n *\n * @example\n *\n * console.log(dash('hello_world')); // 输出: hello-world console.log(dash('hello-world')); // 输出: hello-world console.log(dash('hello.world')); // 输出: hello-world console.log(dash('HelloWorld')); // 输出: helloworld\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function dash(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "dash"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!debounce:function(1)",
+          "docComment": "/**\n * 创建一个防抖函数，限制函数在指定时间间隔内只执行一次。\n *\n * @param options - 包含 `delay` 属性，它是函数延迟执行的毫秒数。\n *\n * @param func - 被防抖的函数。\n *\n * @returns 返回一个新的防抖函数，该函数在指定时间间隔内只执行一次。\n *\n * @example\n *\n * const debouncedFunction = debounce({ delay: 300 }, () => { console.log('Function executed'); });\n *\n * debouncedFunction(); // 不会立即执行 debouncedFunction(); // 不会立即执行 // 300 毫秒后，函数将执行一次\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function debounce({ delay }: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    delay: number;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ", func: "
+            },
+            {
+              "kind": "Content",
+              "text": "(...args: any[]) => any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/function/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "{ delay }",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "func",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "debounce"
+        },
+        {
+          "kind": "Function",
           "canonicalReference": "cfunctool!diffArray:function(1)",
           "docComment": "/**\n * 计算两个数组的差集，返回在 root 数组中存在但在 other 数组中不存在的元素。\n *\n * @param root - 基准数组。\n *\n * @param other - 要比较的数组。\n *\n * @param getter - 用于从数组元素中提取键值的函数。\n *\n * @returns 返回一个数组，包含在 root 数组中存在但在 other 数组中不存在的元素。\n *\n * @example\n *\n * const root = [{ id: 'a' }, { id: 'b' }, { id: 'c' }]; const other = [{ id: 'b' }, { id: 'd' }]; const getter = (obj) => obj.id; console.log(diffArray(root, other, getter)); // 输出: [{ id: 'a' }, { id: 'c' }]\n */\n",
           "excerptTokens": [
@@ -224,7 +510,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -298,7 +584,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -327,6 +613,288 @@
         },
         {
           "kind": "Function",
+          "canonicalReference": "cfunctool!getRealArray:function(1)",
+          "docComment": "/**\n * @description 返回所有非空元素的数组\n *\n * @param array - \n *\n * @returns 含非空元素的数组\n *\n * @example\n * ```JavaScript\n *    let arr =[1,2,3,null,undefined,4,[],{},NaN]; getRelArray(arr)=> [1,2,3,4]\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getRealArray(array: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 4,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getRealArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!getStringType:function(1)",
+          "docComment": "/**\n * @description 返回数据的类型\n *\n * @param value - 判断的数据\n *\n * @returns 数据的类型\n *\n * @example\n * ```JavaScript\n *  let a = 1; getStringType(a) => [object number]\n *  let b = [1,2,3]; getStringType(b) => [object array]\n *  let c = function () {}; getStringType(c) => [object function]\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function getStringType(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "getStringType"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!hasTypeIn:function(1)",
+          "docComment": "/**\n * @description 返回数据是否属于给定的类型中\n *\n * @param value - 判断的数据\n *\n * @param types - 需要检查类型的字符串数组\n *\n * @returns \n *\n * @example\n * ```JavaScript\n *  let a = '123' ; hasTypeIn(a, ['Number', 'array']) => true\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function hasTypeIn(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", types: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<string>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 6,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "types",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 5
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "hasTypeIn"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!invert:function(1)",
+          "docComment": "/**\n * 反转对象的键和值。\n *\n * @param obj - 要反转的对象。\n *\n * @returns 返回一个新的对象，其中原对象的键变为值，原对象的值变为键。\n *\n * @example\n *\n * const original = { a: 1, b: 2, c: 3 }; const inverted = invert(original); console.log(inverted); // 输出: { '1': 'a', '2': 'b', '3': 'c' }\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function invert(obj: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<any, string>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "Record",
+              "canonicalReference": "!Record:type"
+            },
+            {
+              "kind": "Content",
+              "text": "<any, string>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/object/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 4,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "obj",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "invert"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!is:function(1)",
+          "docComment": "/**\n * @description 返回数据是否是判断的类型\n *\n * @param value - 判断的数据\n *\n * @param type - 判断是否是该类型\n *\n * @returns 布尔值\n *\n * @example\n * ```JavaScript\n *  let a = 1; is(a, 'number') => true\n *  let b = 1; is(b, 'Number') => true\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function is(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", type: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "type",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "is"
+        },
+        {
+          "kind": "Function",
           "canonicalReference": "cfunctool!isArray:function(1)",
           "docComment": "/**\n * 检查给定的值是否为数组。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是数组则返回 `true`，否则返回 `false`。\n *\n * @example\n * ```typescript\n * isArray([]); // 返回 true\n * isArray({}); // 返回 false\n * isArray('hello'); // 返回 false\n * isArray([1, 2, 3]); // 返回 true\n * ```\n *\n */\n",
           "excerptTokens": [
@@ -351,7 +919,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -401,7 +969,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 4,
             "endIndex": 5
@@ -419,6 +987,1087 @@
             }
           ],
           "name": "isArrayExist"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isBoolean:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为布尔类型。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是布尔类型则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isBoolean(true)); // 输出: true console.log(isBoolean(false)); // 输出: true console.log(isBoolean(1)); // 输出: false console.log(isBoolean('true'));// 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isBoolean(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/boolean/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isBoolean"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isDate:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为 Date 类型。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是 Date 类型则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isDate(new Date())); // 输出: true console.log(isDate('2023-10-01')); // 输出: false console.log(isDate(1696108800000)); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isDate(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Date",
+              "canonicalReference": "!Date:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/date/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isDate"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isEmpty:function(1)",
+          "docComment": "/**\n * 返回判断的数据是否为空\n *\n * @param value - \n *\n * @returns 布尔值，值为空 (空数组或空对象) 或者值为假 (例如 null、undefined、false、0、空字符串、set和map的大小),则返回true；否则为false\n *\n * @example\n * ```JavaScript\n *  let s = new Set(); isEmpty(s) => true\n *  let obj ={};  isEmpty(obj) => true\n *  let arr = ['1', {a: '12'}]; isEmpty(arr) => false\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isEmpty(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isEmpty"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isEqArray:function(1)",
+          "docComment": "/**\n * 比较两个数组是否相等。\n *\n * @param v1 - 第一个数组，用于比较的源数组。\n *\n * @param v2 - 第二个数组，用于比较的目标数组。\n *\n * @returns 如果两个数组在每个位置上的元素都相等则返回 true，否则返回 false。\n *\n * @example\n *\n * const array1 = [1, 2, 3]; const array2 = [1, 2, 3]; const array3 = [1, 2, 4]; console.log(isEqArray(array1, array2)); // 输出: true console.log(isEqArray(array1, array3)); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isEqArray(v1: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ", v2: "
+            },
+            {
+              "kind": "Reference",
+              "text": "Array",
+              "canonicalReference": "!Array:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "v1",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 3
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "v2",
+              "parameterTypeTokenRange": {
+                "startIndex": 4,
+                "endIndex": 6
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isEqArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isEqType:function(1)",
+          "docComment": "/**\n * 检查两个数据的类型是否相等\n *\n * @param value1 - 第一个要比较的值。\n *\n * @param value2 - 第二个要比较的值。\n *\n * @returns \n *\n * @example\n * ```JavaScript\n * let a =1;\n * let b =new Number();\n * isEqType(value,value2) => true\n *\n * let a ='1';\n * let b =new Number();\n * isEqType(value,value2) => false\n *\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isEqType(value1: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", value2: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value1",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "value2",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isEqType"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isEqValue:function(1)",
+          "docComment": "/**\n * 检查比较的两个参数是否相等，包括其值和类型是否相等，考虑顺序。\n *\n * @param value1 - 第一个要比较的值。\n *\n * @param value2 - 第二个要比较的值。\n *\n * @returns 布尔值\n *\n * @example\n * ```JavaScript\n *  let a =NaN;let b = NaN; isEqValue(a,b) =>true\n *  let m1 = new Map(); m1.set('a', 1); m1.set('b', 2);\n *  let m2 = new Map(); m2.set('b', 2); m2.set('a', 1);\n *  isEqValue(m1,m2) =>false\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isEqValue(value1: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", value2: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value1",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "value2",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isEqValue"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isFloat:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为浮点数。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是浮点数则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isFloat(123.45)); // 输出: true console.log(isFloat(123)); // 输出: false console.log(isFloat('123.45')); // 输出: false console.log(isFloat(NaN)); // 输出: false console.log(isFloat(Infinity)); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isFloat(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is number"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/number/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isFloat"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isFunction:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为函数类型。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是函数类型则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isFunction(() => {})); // 输出: true console.log(isFunction(function() {})); // 输出: true console.log(isFunction(1)); // 输出: false console.log(isFunction('function() {}')); // 输出: false console.log(isFunction({})); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isFunction(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/function/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isFunction"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isInt:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为整数。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是整数则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isInt(123)); // 输出: true console.log(isInt(123.45)); // 输出: false console.log(isInt('123')); // 输出: false console.log(isInt(NaN)); // 输出: false console.log(isInt(Infinity)); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isInt(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is number"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/number/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isInt"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isNull:function(1)",
+          "docComment": "/**\n * @description 返回数据是否是null,为空\n *\n * @param value - 判断的数据\n *\n * @returns 布尔值\n *\n * @example\n * ```JavaScript\n *  let a = null; isNull(a) => true\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNull(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isNull"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isNumber:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为数字类型。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是数字类型则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isNumber(123)); // 输出: true console.log(isNumber('123')); // 输出: false console.log(isNumber(NaN)); // 输出: true console.log(isNumber(Infinity)); // 输出: true console.log(isNumber({})); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isNumber(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is number"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/number/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isNumber"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isObject:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为普通对象。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是普通对象则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isObject({})); // 输出: true console.log(isObject(new Object())); // 输出: true console.log(isObject([])); // 输出: false console.log(isObject(null)); // 输出: false console.log(isObject(undefined)); // 输出: false console.log(isObject(function() {})); // 输出: false console.log(isObject(new Date())); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isObject(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is object"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/object/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 5
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isObject"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isPromise:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为 Promise 对象。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是 Promise 对象则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isPromise(Promise.resolve())); // 输出: true console.log(isPromise(new Promise(() => {}))); // 输出: true console.log(isPromise(1)); // 输出: false console.log(isPromise('string')); // 输出: false console.log(isPromise({})); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isPromise(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Reference",
+              "text": "value",
+              "canonicalReference": "cfunctool!~value"
+            },
+            {
+              "kind": "Content",
+              "text": " is "
+            },
+            {
+              "kind": "Reference",
+              "text": "Promise",
+              "canonicalReference": "!Promise:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "<any>"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/promise/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 7
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isPromise"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isRange:function(1)",
+          "docComment": "/**\n * 检查给定的数字是否在指定范围内。\n *\n * @param number - 要检查的数字。\n *\n * @param start - 范围的起始值。\n *\n * @param end - 可选的范围的结束值。如果未提供，则范围从 0 到 `start`。\n *\n * @returns 如果数字在指定范围内则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isRange(5, 1, 10)); // 输出: true console.log(isRange(5, 10)); // 输出: false console.log(isRange(5, 5)); // 输出: true console.log(isRange(5, 10, 1)); // 输出: true console.log(isRange(5, 'a', 10)); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isRange(number: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", start: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", end?: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/number/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "number",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "start",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "end",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "isRange"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isRefType:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为引用类型。\n *\n * 引用类型包括对象、数组、函数等。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是引用类型则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isRefType({})); // 输出: true console.log(isRefType([])); // 输出: true console.log(isRefType(() => {})); // 输出: true console.log(isRefType(true)); // 输出: false console.log(isRefType(42)); // 输出: false console.log(isRefType('hello')); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isRefType(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isRefType"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isSimpleType:function(1)",
+          "docComment": "/**\n * 检查给定的值是否为简单类型。\n *\n * 简单类型包括 undefined、null、boolean、number、string 和 symbol。\n *\n * @param value - 要检查的值。\n *\n * @returns 如果值是简单类型则返回 true，否则返回 false。\n *\n * @example\n *\n * console.log(isSimpleType(true)); // 输出: true console.log(isSimpleType(42)); // 输出: true console.log(isSimpleType('hello')); // 输出: true console.log(isSimpleType(null)); // 输出: true console.log(isSimpleType(undefined)); // 输出: true console.log(isSimpleType({})); // 输出: false console.log(isSimpleType(() => {})); // 输出: false\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isSimpleType(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isSimpleType"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!isUndefined:function(1)",
+          "docComment": "/**\n * @description 返回数据是否是undefined,为未定义\n *\n * @param value - 判断的数据, 需要已声明\n *\n * @returns 布尔值\n *\n * @example\n * ```JavaScript\n *  let a ; isUndefined(a) => true\n * ```\n *\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function isUndefined(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "boolean"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/common/src/validate.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "isUndefined"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!iterate:function(1)",
+          "docComment": "/**\n * 迭代执行给定的函数指定次数，并返回最终结果。\n *\n * @param length - 迭代的次数。\n *\n * @param func - 每次迭代要执行的函数。\n *\n * @param initValue - 初始值。\n *\n * @returns 返回经过指定次数迭代后的最终结果。\n *\n * @example\n *\n * const func = (current) => current + 'a'; console.log(iterate(3, func, '')); // 输出: aaa console.log(iterate(2, (current) => current + 'b', 'x')); // 输出: xbb\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function iterate(length: "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": ", func: "
+            },
+            {
+              "kind": "Content",
+              "text": "(current: string) => string"
+            },
+            {
+              "kind": "Content",
+              "text": ", initValue: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "length",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "func",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "initValue",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "iterate"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!keys:function(1)",
+          "docComment": "/**\n * 获取对象的所有键路径。\n *\n * @param obj - 要获取键路径的对象。\n *\n * @returns 返回一个包含所有键路径的字符串数组。\n *\n * @example\n *\n * const obj = { a: { b: 1, c: { d: 2 } }, e: [3, { f: 4 }] }; const keysArray = keys(obj); console.log(keysArray); // 输出: ['a.b', 'a.c.d', 'e.0', 'e.1.f']\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function keys(obj: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/object/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "obj",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "keys"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!pascal:function(1)",
+          "docComment": "/**\n * 将字符串转换为 PascalCase（帕斯卡命名法）。\n *\n * @param str - 要转换的字符串。\n *\n * @returns 返回转换后的 PascalCase 字符串。\n *\n * @example\n *\n * console.log(pascal('hello_world')); // 输出: HelloWorld console.log(pascal('hello-world')); // 输出: HelloWorld console.log(pascal('hello.world')); // 输出: HelloWorld console.log(pascal('hello world')); // 输出: HelloWorld console.log(pascal('')); // 输出: ''\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function pascal(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "pascal"
         },
         {
           "kind": "Function",
@@ -454,7 +2103,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -512,7 +2161,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 4,
             "endIndex": 5
@@ -530,6 +2179,67 @@
             }
           ],
           "name": "randomDraw"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!series:function(1)",
+          "docComment": "/**\n * 创建一个系列对象，提供对数组中元素的便捷访问方法。\n *\n * @param arrays - 包含元素的数组。\n *\n * @param toKey - 可选的函数，用于将元素转换为唯一的键，默认为返回元素本身。\n *\n * @returns 返回一个包含多种访问方法的对象。\n *\n * @example\n *\n * const seriesObj = series(['a', 'b', 'c']); console.log(seriesObj.min('b', 'c')); // 输出: 'b' console.log(seriesObj.max('b', 'c')); // 输出: 'c' console.log(seriesObj.first()); // 输出: 'a' console.log(seriesObj.last()); // 输出: 'c' console.log(seriesObj.next('b')); // 输出: 'c' console.log(seriesObj.previous('b')); // 输出: 'a' console.log(seriesObj.spin('b', 1)); // 输出: 'c' console.log(seriesObj.spin('b', -1)); // 输出: 'a'\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function series(arrays: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", toKey?: "
+            },
+            {
+              "kind": "Content",
+              "text": "(item: any) => any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/object/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "arrays",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "toKey",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "series"
         },
         {
           "kind": "Function",
@@ -562,7 +2272,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 4,
             "endIndex": 5
@@ -633,7 +2343,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 8,
             "endIndex": 10
@@ -712,7 +2422,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 8
@@ -738,6 +2448,267 @@
             }
           ],
           "name": "splitArray"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!template:function(1)",
+          "docComment": "/**\n * 使用提供的数据替换字符串中的模板占位符。\n *\n * @param str - 包含模板占位符的字符串。\n *\n * @param data - 包含替换值的对象。\n *\n * @param regex - 可选的正则表达式，用于匹配模板占位符，默认为 `/\\{\\{(.+?)\\}\\}/g`。\n *\n * @returns 返回替换后的字符串。\n *\n * @example\n *\n * const templateString = 'Hello, {{name}}! You have {{count}} new messages.'; const data = { name: 'Alice', count: 5 }; console.log(template(templateString, data)); // 输出: Hello, Alice! You have 5 new messages.\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function template(str: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ", data: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", regex?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "RegExp",
+              "canonicalReference": "!RegExp:interface"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 7,
+            "endIndex": 8
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "str",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "data",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "regex",
+              "parameterTypeTokenRange": {
+                "startIndex": 5,
+                "endIndex": 6
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "template"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!throttle:function(1)",
+          "docComment": "/**\n * 创建一个节流函数，限制函数在指定时间间隔内只执行一次。\n *\n * @param options - 包含 `interval` 属性，它是函数执行的时间间隔（毫秒数）。\n *\n * @param func - 被节流的函数。\n *\n * @returns 返回一个新的节流函数，该函数在指定时间间隔内只执行一次。\n *\n * @example\n *\n * const throttledFunction = throttle({ interval: 300 }, () => { console.log('Function executed'); });\n *\n * throttledFunction(); // 执行 throttledFunction(); // 不执行 throttledFunction(); // 不执行 // 300 毫秒后，再次调用时会执行\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function throttle({ interval }: "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    interval: number;\n}"
+            },
+            {
+              "kind": "Content",
+              "text": ", func: "
+            },
+            {
+              "kind": "Content",
+              "text": "(...args: any[]) => any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/function/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "{ interval }",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "func",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "name": "throttle"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!toFloat:function(1)",
+          "docComment": "/**\n * 将给定的值转换为浮点数。\n *\n * @param value - 要转换的值。\n *\n * @param defaultValue - 如果转换失败时的默认值，默认为 0。\n *\n * @returns 如果值可以转换为浮点数则返回该浮点数，否则返回默认值。\n *\n * @example\n *\n * console.log(toFloat('123.45')); // 输出: 123.45 console.log(toFloat('abc')); // 输出: 0 console.log(toFloat('123.45', 10)); // 输出: 123.45 console.log(toFloat(null, 10)); // 输出: 10 console.log(toFloat(undefined, 10)); // 输出: 10\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function toFloat(value: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", defaultValue?: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/number/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "value",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "defaultValue",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "toFloat"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "cfunctool!uid:function(1)",
+          "docComment": "/**\n * 生成指定长度的唯一标识符（UID）。\n *\n * @param length - UID 的长度。\n *\n * @param specials - 可选的特殊字符，这些字符将包含在 UID 中。\n *\n * @returns 返回生成的 UID 字符串。\n *\n * @example\n *\n * console.log(uid(5)); // 输出: 随机生成的 5 位 UID，例如: aB3dE console.log(uid(8, '-_')); // 输出: 随机生成的 8 位 UID，包含特殊字符，例如: aB3-dE_9\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "export declare function uid(length: "
+            },
+            {
+              "kind": "Content",
+              "text": "number"
+            },
+            {
+              "kind": "Content",
+              "text": ", specials?: "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "string"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "lib/utils/string/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Public",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "length",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "specials",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "uid"
         },
         {
           "kind": "Function",
@@ -778,7 +2749,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "lib/utils/array/index.d.ts",
+          "fileUrlPath": "lib/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7

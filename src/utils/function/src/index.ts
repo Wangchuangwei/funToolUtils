@@ -65,17 +65,17 @@ export function debounce (
   // 被防抖的函数
   func: (...args: any[]) =>any
 ): any {
-  let timer: NodeJS.Timeout | undefined = undefined
+  let timer: number | undefined = undefined
   // 控制函数是否应该执行
   let active = true
 
-  const debounced = (...args) => {
+  const debounced = (...args: any[]) => {
     if (active) {
       clearTimeout(timer)
       timer = setTimeout(() => {
         active &&  func(...args)
         timer = undefined
-      }, delay)
+      }, delay) 
     } else {
       // 不使用防抖
       func(...args)
@@ -93,7 +93,7 @@ export function debounce (
   }
 
   // 为函数添加方法，用于立即执行func
-  debounced.flush = (...args) => func(...args)
+  debounced.flush = (...args:any[]) => func(...args)
 
   return debounced
 }
@@ -118,11 +118,11 @@ export function throttle (
   {interval}: {interval: number},
   func: (...args: any[]) => any
 ): any {
-  let timer: NodeJS.Timeout | undefined = undefined
+  let timer: number | undefined = undefined
   // 控制函数是否应该执行
   let ready = true
 
-  const thtottled = (...args) => {
+  const thtottled = (...args: any[]) => {
     if (!ready) return
     func(...args)
     ready = false

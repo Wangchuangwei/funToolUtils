@@ -41,7 +41,7 @@ export function isObject (value: any): value is  object {
 export function series (arrays: any, toKey: (item: any) => any = (item) => item): any {
   // 两个映射：元素到索引的映射indexByKey，索引到元素的映射
   const {indexByKey, itemsByIndex} = arrays.reduce(
-    (acc, item, idx) => ({
+    (acc: any, item: any, idx: number) => ({
       indexByKey: {
         ...acc.indexByKey,
         [toKey(item)]: idx,
@@ -58,12 +58,12 @@ export function series (arrays: any, toKey: (item: any) => any = (item) => item)
   )
 
   // 返回两个元素中索引较小的元素
-  const min = (a, b) => {
+  const min = (a: any, b: any) => {
     return indexByKey[a] < indexByKey[b] ? a : b 
   }
 
   // 返回两个元素中索引较大的元素
-  const max = (a, b) => {
+  const max = (a: any, b: any) => {
     return indexByKey[a] > indexByKey[b] ? a : b
   }
 
@@ -78,17 +78,17 @@ export function series (arrays: any, toKey: (item: any) => any = (item) => item)
   }
 
   // 返回当前元素的下一个元素，没有则默认值或第一个元素
-  const next = (current, defaultValue?) => {
+  const next = (current: any, defaultValue?: any) => {
     return itemsByIndex[indexByKey[toKey(current)] + 1] ?? defaultValue ?? first()
   }
 
   // 返回当前元素的下一个元素，没有则默认值或最后一个元素
-  const previous = (current, defaultValue?) => {
+  const previous = (current: any, defaultValue?: any) => {
     return itemsByIndex[indexByKey[toKey(current)] - 1] ?? defaultValue ?? last()
   }
 
   // 返回距离当前元素为num的元素。带方向，且以arrays数组为循环
-  const spin = (current, num: number) => {
+  const spin = (current: any, num: number) => {
     if (num  % arrays.length === 0) return current
     const abs = Math.abs(num)
     const rel = abs > arrays.length ? abs % arrays.length : abs
@@ -151,14 +151,15 @@ export function clone (obj: any):any {
  * const inverted = invert(original);
  * console.log(inverted); // 输出: { '1': 'a', '2': 'b', '3': 'c' }
  */
-export function invert (obj: any):any {
+export function invert (obj: Record<any, string>):Record<any, string> {
   if (!obj) return {}
 
-  const keys = Object.keys(obj)
+  const keys: string[]  = Object.keys(obj)
   return keys.reduce((acc, key) => {
-    acc[obj[key]] = key
+    const val = obj[key]
+    acc[val] = key
     return acc
-  }, {})
+  }, {} as Record<any, string>)
 }
 
 /**
@@ -181,7 +182,7 @@ export function keys (obj: any): any {
     }
     if (isArray(nested)) {
       // 将索引 `i` 转换为字符串
-      nested.flatMap((item, i) => getKeys(item, [...paths, `${i}`]))
+      nested.flatMap((item: any, i: number) => getKeys(item, [...paths, `${i}`]))
     }
     result.push(paths.join('.'))
     return

@@ -4,7 +4,7 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "CFuncTools",
   description: "A VitePress Site",
-  base: "/CFuncTools/",
+  base: "/funToolUtils/",
   outDir: "../docs/",
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
