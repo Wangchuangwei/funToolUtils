@@ -14,7 +14,8 @@ module.exports = defineConfig([{
       dir: 'testDist/esm', //出口文件
       format: 'esm', //打包格式
       preserveModules: true, // 保持模块原始结构和目录结构
-      plugins:[recordInfo()]
+      plugins:[recordInfo()],
+      entryFileNames: '[name].mjs'
     },
     {
       dir: 'testDist/cjs',

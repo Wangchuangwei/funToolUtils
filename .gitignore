@@ -3,3 +3,4 @@
 /.vitepress/cache
 /dist
 /etc
+/vitepress/.vitepress/cache
