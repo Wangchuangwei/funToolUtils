@@ -1,5 +1,7 @@
 import { defineConfig } from 'vitepress'
 
+import getDosc from './script'
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: "CFuncTools",
@@ -17,19 +19,18 @@ export default defineConfig({
       },
 
     ],
-
-    sidebar: [
-      // {
-      //   text: 'Examples',
-      //   items: [
-      //     { text: 'Markdown Examples', link: '/markdown-examples' },
-      //     { text: 'Runtime API Examples', link: '/api-examples' }
-      //   ]
-      // }
-    ],
+    sidebar: {
+      "etc/doc": [
+          {
+              text: 'API',
+              items: getDosc('./vitepress/etc/doc/*.md','/etc/doc/'),
+          },
+      ],
+    },
+ 
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' }
+      { icon: 'github', link: 'https://github.com/Wangchuangwei/funToolUtils' }
     ]
   }
 })

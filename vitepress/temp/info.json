@@ -1,0 +1,186 @@
+{
+  "camel": {
+    "folderNm": "string",
+    "functionNm": "camel"
+  },
+  "capitalize": {
+    "folderNm": "string",
+    "functionNm": "capitalize"
+  },
+  "chain": {
+    "folderNm": "function",
+    "functionNm": "chain"
+  },
+  "clone": {
+    "folderNm": "object",
+    "functionNm": "clone"
+  },
+  "dash": {
+    "folderNm": "string",
+    "functionNm": "dash"
+  },
+  "debounce": {
+    "folderNm": "function",
+    "functionNm": "debounce"
+  },
+  "diffarray": {
+    "folderNm": "array",
+    "functionNm": "diffArray"
+  },
+  "filterobjectarray": {
+    "folderNm": "array",
+    "functionNm": "filterObjectArray"
+  },
+  "getrealarray": {
+    "folderNm": "array",
+    "functionNm": "getRealArray"
+  },
+  "getstringtype": {
+    "folderNm": "common",
+    "functionNm": "getStringType"
+  },
+  "hastypein": {
+    "folderNm": "common",
+    "functionNm": "hasTypeIn"
+  },
+  "invert": {
+    "folderNm": "object",
+    "functionNm": "invert"
+  },
+  "is": {
+    "folderNm": "common",
+    "functionNm": "is"
+  },
+  "isarray": {
+    "folderNm": "array",
+    "functionNm": "isArray"
+  },
+  "isarrayexist": {
+    "folderNm": "array",
+    "functionNm": "isArrayExist"
+  },
+  "isboolean": {
+    "folderNm": "boolean",
+    "functionNm": "isBoolean"
+  },
+  "isdate": {
+    "folderNm": "date",
+    "functionNm": "isDate"
+  },
+  "isempty": {
+    "folderNm": "common",
+    "functionNm": "isEmpty"
+  },
+  "iseqarray": {
+    "folderNm": "array",
+    "functionNm": "isEqArray"
+  },
+  "iseqtype": {
+    "folderNm": "common",
+    "functionNm": "isEqType"
+  },
+  "iseqvalue": {
+    "folderNm": "common",
+    "functionNm": "isEqValue"
+  },
+  "isfloat": {
+    "folderNm": "number",
+    "functionNm": "isFloat"
+  },
+  "isfunction": {
+    "folderNm": "function",
+    "functionNm": "isFunction"
+  },
+  "isint": {
+    "folderNm": "number",
+    "functionNm": "isInt"
+  },
+  "isnull": {
+    "folderNm": "common",
+    "functionNm": "isNull"
+  },
+  "isnumber": {
+    "folderNm": "number",
+    "functionNm": "isNumber"
+  },
+  "isobject": {
+    "folderNm": "object",
+    "functionNm": "isObject"
+  },
+  "ispromise": {
+    "folderNm": "promise",
+    "functionNm": "isPromise"
+  },
+  "isrange": {
+    "folderNm": "number",
+    "functionNm": "isRange"
+  },
+  "isreftype": {
+    "folderNm": "common",
+    "functionNm": "isRefType"
+  },
+  "issimpletype": {
+    "folderNm": "common",
+    "functionNm": "isSimpleType"
+  },
+  "isundefined": {
+    "folderNm": "common",
+    "functionNm": "isUndefined"
+  },
+  "iterate": {
+    "folderNm": "string",
+    "functionNm": "iterate"
+  },
+  "keys": {
+    "folderNm": "object",
+    "functionNm": "keys"
+  },
+  "pascal": {
+    "folderNm": "string",
+    "functionNm": "pascal"
+  },
+  "random": {
+    "folderNm": "array",
+    "functionNm": "random"
+  },
+  "randomdraw": {
+    "folderNm": "array",
+    "functionNm": "randomDraw"
+  },
+  "series": {
+    "folderNm": "object",
+    "functionNm": "series"
+  },
+  "shuffle": {
+    "folderNm": "array",
+    "functionNm": "shuffle"
+  },
+  "sortobjectarray": {
+    "folderNm": "array",
+    "functionNm": "sortObjectArray"
+  },
+  "splitarray": {
+    "folderNm": "array",
+    "functionNm": "splitArray"
+  },
+  "template": {
+    "folderNm": "string",
+    "functionNm": "template"
+  },
+  "throttle": {
+    "folderNm": "function",
+    "functionNm": "throttle"
+  },
+  "tofloat": {
+    "folderNm": "number",
+    "functionNm": "toFloat"
+  },
+  "uid": {
+    "folderNm": "string",
+    "functionNm": "uid"
+  },
+  "valcountobjectarray": {
+    "folderNm": "array",
+    "functionNm": "valCountObjectArray"
+  }
+}

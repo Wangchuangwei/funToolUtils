@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: "Robinson"
+  name: CFuncTools
   text: "A Simple Web Utils to implement functionality "
   tagline: '一个简单的web工具库'
   actions:
@@ -12,17 +12,17 @@ hero:
       link: /etc/doc/index.html
     - theme: alt
       text: 在 GitHub 上查看
-      link: https://github.com/An-Lijun/Robinson
+      link: https://github.com/Wangchuangwei/funToolUtils
 
 features:
   - icon: ✨
     title: easy to use
-    details: npm i robinson...
+    details: npm i cfunctools...
     link: /guide/start
     linkText: more
   - icon: ⚡️
     title: fast to download
-    details: 34kb
+    details: 32kb
   - icon: 🛠️
     title: unitive api 
     details: isXXX...

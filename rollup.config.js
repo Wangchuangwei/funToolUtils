@@ -36,7 +36,7 @@ module.exports = defineConfig([{
       }]
     }),
 
-    // terser(),
+    terser(),
     // visualizer({
     //   filename: './coverage/stats.html', // 生成的分析文件名称
     //   open: true, // 是否在生成后+自动打开浏览器
@@ -57,5 +57,16 @@ module.exports = defineConfig([{
   plugins: [
     dts()
   ]
-}
+},
+{
+  input: 'src/index.ts',
+  output: {
+    dir: 'testDist/cjs/types',
+    format: 'cjs',
+    preserveModules: true
+  },
+  plugins: [
+    dts()
+  ]
+},
 ])
